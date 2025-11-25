@@ -33,6 +33,11 @@
             background-color: #F3E9D9;
             font-family: 'Inter', sans-serif;
             color: #3A2B26;
+            scroll-behavior: smooth; /* Smooth scrolling for navigation links */
+        }
+        /* Style for desktop navigation links */
+        .nav-link {
+            @apply text-brand-espresso font-semibold hover:text-brand-red transition duration-150 p-2 rounded-lg;
         }
     </style>
 </head>
@@ -59,6 +64,14 @@
                         LeHandyFrenchie
                     </span>
                 </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-4">
+                    <a href="#hero" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About Us</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
 
                 <!-- Primary Call to Action Button (Always Visible) -->
                 <a href="tel:801-808-0854" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-bold rounded-xl shadow-lg 
@@ -89,7 +102,34 @@
             </a>
         </section>
 
-        <!-- 3. Services Listing Section -->
+        <!-- 3. About Section: The Frenchie Advantage -->
+        <section id="about" class="mb-16 bg-brand-espresso p-8 rounded-2xl shadow-xl border-t-8 border-brand-orange">
+            <div class="max-w-4xl mx-auto text-center">
+                <h3 class="text-4xl font-extrabold text-brand-cream mb-4 tracking-tight font-heading">
+                    The Frenchie Advantage
+                </h3>
+                <p class="text-xl text-brand-cream/90 mb-6">
+                    With over three decades of residential construction experience, we bring a level of skill and precision to your home that larger, less specialized companies often miss. We provide high-quality craftsmanship, reliable scheduling, and personalized service you can trust.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-brand-cream text-lg font-medium">
+                    <div class="p-4 rounded-lg bg-brand-red/90 shadow-md">
+                        <span class="text-3xl text-brand-orange font-bold block">30+</span>
+                        Years of Experience
+                    </div>
+                    <div class="p-4 rounded-lg bg-brand-red/90 shadow-md">
+                        <span class="text-3xl text-brand-orange font-bold block">Local</span>
+                        Serving Davis & SL Counties
+                    </div>
+                    <div class="p-4 rounded-lg bg-brand-red/90 shadow-md">
+                        <span class="text-3xl text-brand-orange font-bold block">Detail</span>
+                        Focus on Quality Finish
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Services Listing Section -->
         <section id="services" class="mb-16">
             <h3 class="text-4xl sm:text-5xl font-extrabold text-center text-brand-espresso mb-10 tracking-tight font-heading">
                 Comprehensive Handyman Expertise
@@ -140,7 +180,7 @@
             </div>
         </section>
 
-        <!-- 4. Contact & Service Area Section -->
+        <!-- 5. Contact & Service Area Section -->
         <section id="contact" class="text-center bg-brand-espresso p-8 rounded-2xl shadow-2xl">
             <h3 class="text-4xl font-extrabold text-brand-cream mb-4">
                 Get a Free, Friendly Estimate
