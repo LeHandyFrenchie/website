@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeHandyFrenchie - Professional Handyman Services | No Job Too Small</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Google Font: Inter (clean sans-serif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Tailwind Configuration for Brand Colors */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-cream': '#F3E9D9',      /* Warm Cream / Soft Beige Background */
+                        'brand-espresso': '#3A2B26',    /* Dark Brown / Espresso Text */
+                        'brand-red': '#A12C1A',         /* Deep Red / Brick Red Headlines */
+                        'brand-orange': '#D68A1E',      /* Warm Orange / Amber Accents */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Inter', 'sans-serif'], 
+                    }
+                }
+            }
+        }
+
+        /* Set the base background and text color */
+        body {
+            background-color: #F3E9D9;
+            font-family: 'Inter', sans-serif;
+            color: #3A2B26;
+        }
+    </style>
+</head>
+<body class="min-h-screen antialiased">
+
+    <!-- 1. Header Section & Navigation Bar -->
+    <header class="bg-brand-cream border-t-4 border-brand-red shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo & Brand Name -->
+                <a href="#hero" class="flex items-center space-x-2">
+                    <!-- Icon: Handyman/House (Friendly, Professional) -->
+                    <svg class="h-8 w-8 text-brand-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 18H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3" />
+                        <polyline points="12 15 15 12 18 15" />
+                        <line x1="15" y1="12" x2="15" y2="22" />
+                        <path d="M14 22L10 22C8.94 22 8.44 21.31 8.52 20.25L9.34 16.5C9.42 15.44 9.92 14.75 10.98 14.75H13.02C14.08 14.75 14.58 15.44 14.66 16.5L15.48 20.25C15.56 21.31 15.06 22 14 22Z" fill="#D68A1E" stroke="#A12C1A"/>
+                        <line x1="12" y1="5" x2="12" y2="3" />
+                        <line x1="6" y1="5" x2="6" y2="3" />
+                        <line x1="18" y1="5" x2="18" y2="3" />
+                    </svg>
+                    <span class="text-3xl font-extrabold text-brand-espresso tracking-tight uppercase font-heading">
+                        LeHandyFrenchie
+                    </span>
+                </a>
+
+                <!-- Primary Call to Action Button (Always Visible) -->
+                <a href="tel:801-808-0854" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-bold rounded-xl shadow-lg 
+                    text-brand-red bg-brand-orange hover:bg-brand-red hover:text-brand-cream transition duration-300 transform hover:scale-105">
+                    CALL: 801-808-0854
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 sm:p-8 lg:p-12">
+        
+        <!-- 2. Hero Section -->
+        <section id="hero" class="text-center mb-16 pt-10 rounded-2xl p-8 bg-white shadow-xl">
+            <h1 class="text-5xl md:text-7xl font-black text-brand-red mb-4 tracking-tighter font-heading">
+                Skilled Home Repair Services
+            </h1>
+            <h2 class="text-3xl md:text-4xl font-semibold text-brand-espresso/90 mb-6">
+                <span class="text-brand-orange">30+ Years of Experience.</span> Always Professional, Always Friendly.
+            </h2>
+            <p class="text-xl italic mb-8 text-brand-espresso">
+                — "No Job Too Small" —
+            </p>
+
+            <a href="#services" class="inline-block px-10 py-4 text-xl font-extrabold rounded-full shadow-2xl 
+                bg-brand-red text-brand-cream hover:bg-brand-orange transition duration-300 transform hover:translate-y-[-2px]">
+                View Our Complete Service List Below
+            </a>
+        </section>
+
+        <!-- 3. Services Listing Section -->
+        <section id="services" class="mb-16">
+            <h3 class="text-4xl sm:text-5xl font-extrabold text-center text-brand-espresso mb-10 tracking-tight font-heading">
+                Comprehensive Handyman Expertise
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Painting & Finishing -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-brand-red">
+                    <h4 class="text-2xl font-bold text-brand-red mb-3">Finishing & Surfaces</h4>
+                    <ul class="space-y-2 text-lg font-medium list-disc list-inside text-brand-espresso">
+                        <li>Painting – Inside & Out</li>
+                        <li>Venetian Plaster</li>
+                        <li>Baseboard Installation</li>
+                        <li>Siding</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Structural & Countertops -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-brand-orange">
+                    <h4 class="text-2xl font-bold text-brand-orange mb-3">Structural Repair</h4>
+                    <ul class="space-y-2 text-lg font-medium list-disc list-inside text-brand-espresso">
+                        <li>Stone & Stucco Repair</li>
+                        <li>New Window Installation</li>
+                        <li>Plaster Foundation</li>
+                        <li>Granite Countertops</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: Kitchen & Outdoor -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-b-4 border-brand-red">
+                    <h4 class="text-2xl font-bold text-brand-red mb-3">Woodwork & Fixtures</h4>
+                    <ul class="space-y-2 text-lg font-medium list-disc list-inside text-brand-espresso">
+                        <li>Cabinets – Fencing – Kitchen</li>
+                        <li>Appliance Hookups</li>
+                        <li>Door Adjustments</li>
+                        <li>Small General Repairs</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Full list for reference and SEO -->
+            <div class="mt-12 text-center p-6 rounded-xl bg-brand-cream border-2 border-brand-espresso/20">
+                <p class="font-bold text-brand-espresso mb-2">Our commitment: We handle all these specific services:</p>
+                <p class="text-sm italic text-brand-espresso/90">
+                    Painting – Inside & Out, Stone & Stucco Repair, Baseboard Installation, New Window Installation, Plaster Foundation, Venetian Plaster, Siding, Granite Countertops, Cabinets – Fencing – Kitchen.
+                </p>
+            </div>
+        </section>
+
+        <!-- 4. Contact & Service Area Section -->
+        <section id="contact" class="text-center bg-brand-espresso p-8 rounded-2xl shadow-2xl">
+            <h3 class="text-4xl font-extrabold text-brand-cream mb-4">
+                Get a Free, Friendly Estimate
+            </h3>
+            <p class="text-xl text-brand-orange mb-6">
+                We are proud to serve all of **Davis County, Utah** and **Salt Lake County, Utah**.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                <!-- Phone CTA -->
+                <div class="bg-brand-cream p-4 rounded-xl w-full sm:w-auto shadow-inner">
+                    <p class="text-lg font-semibold text-brand-espresso">Call or Text Now:</p>
+                    <a href="tel:801-808-0854" class="text-4xl font-black text-brand-red tracking-tight hover:underline">
+                        801-808-0854
+                    </a>
+                </div>
+                
+                <!-- Payment Info -->
+                <div class="text-brand-cream text-lg">
+                    <p class="font-semibold text-brand-orange mb-1">Payment Methods Accepted:</p>
+                    <p class="font-medium">Cash, Check</p>
+                    <p class="text-sm italic text-brand-cream/70 mt-2">(No online payment portal available)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Footer -->
+    <footer class="mt-16 bg-brand-espresso p-6 text-center text-brand-cream/60 text-sm">
+        <p>&copy; 2025 LeHandyFrenchie. All Rights Reserved.</p>
+        <p class="mt-1">Built with pride and experience in Utah.</p>
+    </footer>
+
+</body>
+</html>
