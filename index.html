@@ -7,7 +7,7 @@
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- CONFIGURE TAILWIND (Moved to Script Tag for Correct Loading) -->
+    <!-- CONFIGURE TAILWIND (Script Tag for Correct Loading) -->
     <script>
         tailwind.config = {
             theme: {
@@ -47,18 +47,18 @@
 <body class="min-h-screen antialiased">
 
     <!-- 1. Header Section & Navigation Bar -->
-    <!-- 'bg-brand-cream' will now work correctly, making the header solid and opaque -->
-    <header class="bg-brand-cream border-t-4 border-brand-red shadow-lg sticky top-0 z-50">
+    <header class="bg-brand-cream bg-opacity-100 border-t-4 border-brand-red shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 
                 <!-- Logo & Brand Name -->
-                <a href="#hero" class="flex items-center space-x-3">
+                <!-- Added 'flex-shrink-0' to prevent logo from squashing on mobile -->
+                <a href="#hero" class="flex items-center space-x-2 flex-shrink-0">
                     
-                    <!-- LOGO PLACEHOLDER: Replace 'logo.png' with your actual file name -->
-                    <img src="LeHandyFrenchy LOGOtrans.png" alt="LeHandyFrenchy Logo" class="h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                    <!-- LOGO PLACEHOLDER -->
+                    <img src="logo.png" alt="LeHandyFrenchy Logo" class="h-8 sm:h-10 w-auto object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
                     
-                    <!-- Fallback Icon (Only shows if logo image is broken/missing) -->
+                    <!-- Fallback Icon -->
                     <svg style="display:none;" class="h-8 w-8 text-brand-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 18H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v3" />
                         <polyline points="12 15 15 12 18 15" />
@@ -69,12 +69,14 @@
                         <line x1="18" y1="5" x2="18" y2="3" />
                     </svg>
 
-                    <span class="text-2xl sm:text-3xl font-extrabold text-brand-espresso tracking-tight font-heading">
+                    <!-- Text sizes adjusted: text-lg on mobile, text-3xl on desktop to save space -->
+                    <!-- UPDATED NAME SPELLING -->
+                    <span class="text-lg sm:text-3xl font-extrabold text-brand-espresso tracking-tight font-heading">
                         LeHandyFrenchy
                     </span>
                 </a>
 
-                <!-- Desktop Navigation Links -->
+                <!-- Desktop Navigation Links (Hidden on Mobile) -->
                 <nav class="hidden md:flex space-x-4">
                     <a href="#hero" class="nav-link">Home</a>
                     <a href="#about" class="nav-link">About Us</a>
@@ -82,8 +84,10 @@
                     <a href="#contact" class="nav-link">Contact</a>
                 </nav>
 
-                <!-- Primary Call to Action Button (Always Visible) -->
-                <a href="tel:801-808-0854" class="inline-flex items-center justify-center px-4 py-2 border border-transparent text-base font-bold rounded-xl shadow-lg 
+                <!-- Primary Call to Action Button -->
+                <!-- Added 'whitespace-nowrap' to force single line on mobile -->
+                <!-- Adjusted padding and text size for mobile -->
+                <a href="tel:801-808-0854" class="whitespace-nowrap inline-flex items-center justify-center px-3 py-2 sm:px-4 border border-transparent text-sm sm:text-base font-bold rounded-xl shadow-lg 
                     text-brand-red bg-brand-orange hover:bg-brand-red hover:text-brand-cream transition duration-300 transform hover:scale-105">
                     CALL: 801-808-0854
                 </a>
@@ -114,6 +118,7 @@
         <!-- 3. About Section: The Frenchy Advantage -->
         <section id="about" class="mb-16 bg-brand-espresso p-8 rounded-2xl shadow-xl border-t-8 border-brand-orange">
             <div class="max-w-4xl mx-auto text-center">
+                <!-- UPDATED NAME SPELLING -->
                 <h3 class="text-4xl font-extrabold text-brand-cream mb-4 tracking-tight font-heading">
                     The Frenchy Advantage
                 </h3>
@@ -220,6 +225,7 @@
     
     <!-- Footer -->
     <footer class="mt-16 bg-brand-espresso p-6 text-center text-brand-cream/60 text-sm">
+        <!-- UPDATED NAME SPELLING -->
         <p>&copy; 2025 LeHandyFrenchy. All Rights Reserved.</p>
         <p class="mt-1">Built with pride and experience in Utah.</p>
     </footer>
